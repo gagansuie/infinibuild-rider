@@ -1,15 +1,40 @@
 <idea-plugin require-restart="true">
   <id>com.jetbrains.rider.plugins.infinibuildrider</id>
   <name>InfinibuildRider</name>
-  <version>_PLACEHOLDER_</version>
-  <vendor url="https://project-url">Author</vendor>
-  <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />
+  <version>0.0.1</version>
+  <vendor url="https://github.com/CodeCrowCorp/infinibuild-rider">Code Crow</vendor>
+<!--  <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />-->
   <depends>com.intellij.modules.rider</depends>
 
   <description>
 <![CDATA[
-<p>Sample description</p>
+<p>infinibuild plugin for Rider accelerates build and compile times</p>
 ]]>
   </description>
+
+  <actions>
+    <group id="InfinibuildRider" text="infinibuild" description="Infinibuild menu items">
+      <add-to-group group-id="MainMenu" anchor="last" />
+      <action id="com.jetbrains.rider.plugins.infinibuild.BuildAction"
+              class="com.jetbrains.rider.plugins.infinibuild.BuildAction" text="Build Solution" />
+      <action id="com.jetbrains.rider.plugins.infinibuild.RebuildAction"
+              class="com.jetbrains.rider.plugins.infinibuild.RebuildAction" text="Rebuild Solution" />
+      <action id="com.jetbrains.rider.plugins.infinibuild.CleanAction"
+              class="com.jetbrains.rider.plugins.infinibuild.CleanAction" text="Clean Solution" />
+<!--      <action id="InfinibuildRider.Actions.Rebuild" text="Rebuild" icon="rebuild.png" />
+      <action id="InfinibuildRider.Actions.Clean" text="Clean" icon="clean.png" />
+      <action id="InfinibuildRider.BuildAndRun" text="Build and Run" icon="buildAndRun.png" />
+      <action id="InfinibuildRider.RebuildAndRun" text="Rebuild and Run" icon="rebuildAndRun.png" />
+      <action id="InfinibuildRider.CleanAndRun" text="Clean and Run" icon="cleanAndRun.png" />
+      <action id="InfinibuildRider.BuildAndDebug" text="Build and Debug" icon="buildAndDebug.png" />
+      <action id="InfinibuildRider.RebuildAndDebug" text="Rebuild and Debug" icon="rebuildAndDebug.png" />
+      <action id="InfinibuildRider.CleanAndDebug" text="Clean and Debug" icon="cleanAndDebug.png" />
+      <action id="InfinibuildRider.BuildAndDebugUnitTest" text="Build and Debug Unit Test" icon="buildAndDebugUnitTest.png" />
+      <action id="InfinibuildRider.RebuildAndDebugUnitTest" text="Rebuild and Debug Unit Test" icon="rebuildAndDebugUnitTest.png" />
+      <action id="InfinibuildRider.CleanAndDebugUnitTest" text="Clean and Debug Unit Test" icon="cleanAndDebugUnitTest.png" />
+      <action id="InfinibuildRider.BuildAndDebugIntegrationTest" text="Build and Debug Integration Test" icon="buildAndDebugIntegrationTest.png" />
+      <action id="InfinibuildRider.RebuildAndDebugIntegrationTest" text="Rebuild and Debug Integration Test" icon="rebuildAndDebugIntegrationTest.png" />-->
+    </group>
+  </actions>
 
 </idea-plugin>
