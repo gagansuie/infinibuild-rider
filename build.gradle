@@ -9,6 +9,16 @@ plugins {
     id 'me.filippov.gradle.jvm.wrapper' version '0.10.0'
 }
 
+dependencies {
+    implementation "org.http4k:http4k-core"
+    // OkHttp (Sync + Async):
+    implementation group: "org.http4k", name: "http4k-client-okhttp", version: "4.30.3.0"
+    // Websocket:
+    implementation group: "org.http4k", name: "http4k-client-websocket", version: "4.30.3.0"
+    //Multipart file upload
+    implementation group: "org.http4k", name: "http4k-multipart", version: "4.30.3.0"
+}
+
 ext {
     isWindows = Os.isFamily(Os.FAMILY_WINDOWS)
     rdLibDirectory = {
